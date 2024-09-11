@@ -88,7 +88,10 @@ if st.button("Submit"):
             with st.expander("Blog"):
                 blog_agent = BlogAgent(llm, topic, url, summarized_content)
                 blog_content, blog_md, imgs, blog_status = blog_agent.generate_blog()
-                st.markdown(blog_status)
+                with open(blog_md, 'r') as f:
+                    blog_markdown = f.read()
+                st.markdown(blog_markdown)
+                st.image(imgs, ['image 1', 'image 2'], width=320)
 
         if "LinkedIn Post" in options:
             with st.spinner("Creating LinkedIn Post..."):
