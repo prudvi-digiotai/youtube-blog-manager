@@ -62,8 +62,8 @@ from agents import BlogAgent, LinkedinAgent, TwitterAgent, EmailAgent
 from tools import youtube_transcript_loader
 from utils import twitter_tweet
 from langchain_openai import ChatOpenAI
-from dotenv import load_dotenv
-load_dotenv()
+# from dotenv import load_dotenv
+# load_dotenv()
 
 st.title("YouTube video Manager")
 
